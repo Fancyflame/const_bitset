@@ -18,6 +18,6 @@ impl Occupations for A32 {
 
 fn main() {
     type Chained = Chain<A24, Chain<A32, A24>>; // Count = 24 + (32 + 24) = 80
-    let _: fn([u32; 3]) = drop::<<Chained as ConstBitset>::Bitset>; // ceil(80 / 3) = 3
+    let _: fn([u32; 3]) = drop::<<Chained as ConstBitset>::Bitset>; // ceil(80 / 32) = 3
 }
 ```
